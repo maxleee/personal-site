@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
+import HeaderBlobs from '../components/headerBlobs';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -30,6 +31,8 @@ export default function Home({ allPostsData }) {
           </p>
         </div>
         <div className='intro-divider'></div>
+
+        <HeaderBlobs />
       </section>
       <div className='intro-divider'></div>
       <section className='about'>
@@ -46,7 +49,7 @@ export default function Home({ allPostsData }) {
         <h2 className='title'>Recent Work</h2>
 
         {allPostsData.map(({ id, title, description, linkText, actionLink, image }) => (
-          <div className='project-wrapper'>
+          <div className='project-wrapper' key={id}>
             <div className='project-image-wrapper'>
               <Image
                 priority

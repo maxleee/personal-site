@@ -52,6 +52,7 @@ p {
 main {
   display: grid;
   grid-template-rows: 500px 1px 500px 1px 1fr;
+  z-index: 10;
 }
 
 .main-heading {
@@ -77,14 +78,18 @@ main {
   grid-template-columns: 60% 1px 1fr;
   height: 500px;
   padding-inline: 5rem;
+
+  position: relative;
 }
 
 .intro,
 .about {
   place-self: center;
+  z-index: 10;
 }
 .intro-divider {
   background-color: var(--gray);
+  z-index: 10;
 }
 
 .work {
