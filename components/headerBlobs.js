@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-const { motion, useMotionValue, useTransform } = require('framer-motion');
+const { motion } = require('framer-motion');
 
 export default function HeaderBlobs() {
   const [mousePosition, setMousePosition] = useState({});

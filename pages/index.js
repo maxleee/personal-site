@@ -4,6 +4,7 @@ import Layout, { siteTitle } from '../components/layout';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import HeaderBlobs from '../components/headerBlobs';
+const { motion } = require('framer-motion');
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -23,8 +24,17 @@ export default function Home({ allPostsData }) {
       <section className='intro-wrapper'>
         <div className='intro'>
           <h1 className='main-heading'>
-            <span className='main-heading-small'>👋🏻 I'm Max</span>a visual designer and frontend
-            developer
+            <span className='main-heading-small'>
+              <motion.div
+                whileHover={{ rotate: [10, 0, 8, -2, 3], scale: 1.3 }}
+                style={{ originX: 0.8, originY: 1, display: 'inline-block', marginRight: '8px' }}>
+                <span role='img' aria-label='hand waving'>
+                  👋🏻
+                </span>
+              </motion.div>{' '}
+              I'm Max
+            </span>
+            a visual designer and frontend developer
           </h1>
           <p className='tagline'>
             I enjoy finding solutions to complex problems and learning a few things along the way.
