@@ -26,6 +26,7 @@ h4,
 h5,
 h6 {
   font-family: 'A-WideHeavy';
+  line-height: 1.2;
 }
 
 * {
@@ -61,11 +62,17 @@ main {
   font-size: 3.125rem;
   line-height: 1.2;
   margin: 0;
+  @media (max-width: 600px) {
+    font-size: 2.25rem;
+  }
   .main-heading-small {
     display: block;
     font-size: 2rem;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
       Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    @media (max-width: 600px) {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -87,6 +94,9 @@ main {
     .intro-divider {
       display: none;
     }
+  }
+  @media (max-width: 600px) {
+    padding-inline: 2rem;
   }
 }
 
@@ -115,7 +125,7 @@ main {
     font-size: 2rem;
     color: var(--dark-green);
     text-align: center;
-    margin: 0;
+    margin: 0.5rem;
   }
   .paragraph {
     font-size: 18px;
@@ -142,6 +152,9 @@ main {
   @media (max-width: 900px) {
     padding-inline: 3rem;
   }
+  @media (max-width: 900px) {
+    padding-inline: 2rem;
+  }
 }
 .connect-link-wrapper {
   display: flex;
@@ -154,6 +167,12 @@ main {
   gap: 4rem;
   margin-block: 4rem;
   padding-inline: 4rem;
+  @media (max-width: 600px) {
+    grid-template-columns: 100%;
+    gap: 1rem;
+    margin-block: 5rem;
+    padding-inline: 2rem;
+  }
 }
 .project-image-wrapper {
   place-self: center;
@@ -161,7 +180,7 @@ main {
 
 .project-title {
   color: #2f3b37;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
   font-size: 1.5rem;
 }
 .external-link {
@@ -191,5 +210,9 @@ main {
   @media (max-width: 900px) {
     width: 65%;
     height: auto;
+  }
+  @media (max-width: 600px) {
+    width: 120%;
+    top: -150px;
   }
 }
