@@ -69,14 +69,15 @@ export default function HeaderBlobs() {
       variants={parent}
       whileHover='hover'
       initial='init'
-      onMouseMove={e => handleMouseMove(e)}>
+      onMouseMove={e => handleMouseMove(e)}
+      className='blobs-wrapper'>
       <svg
         width='786'
         height='642'
         viewBox='0 0 786 642'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
-        style={{ position: 'absolute', top: 0, right: 0, zIndex: 0, overflow: 'visible' }}>
+        className='header-blobs'>
         <g filter='url(#filter0_f_303_2)'>
           <path
             d='M966.496 217.668C961.531 387.142 802.551 546.338 626.207 541.172C546.197 380.097 203.174 340.067 212.197 32.0967C217.163 -137.377 479.844 -103.711 656.188 -98.5449C832.532 -93.3784 971.462 48.1951 966.496 217.668Z'

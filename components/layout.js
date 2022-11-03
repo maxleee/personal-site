@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const { MotionConfig } = require('framer-motion');
+
 const name = 'Max';
 export const siteTitle = 'Max Orenzuk';
 
@@ -20,23 +22,25 @@ export default function Layout({ children, home }) {
         <meta name='og:title' content={siteTitle} />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-      <header>
-        {home ? (
-          <></>
-        ) : (
-          <Link href='/'>
-            <a>Home</a>
-          </Link>
+      <MotionConfig reducedMotion='user'>
+        <header>
+          {home ? (
+            <></>
+          ) : (
+            <Link href='/'>
+              <a>Home</a>
+            </Link>
+          )}
+        </header>
+        <main>{children}</main>
+        {!home && (
+          <div>
+            <Link href='/'>
+              <a>← Back to home</a>
+            </Link>
+          </div>
         )}
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div>
-          <Link href='/'>
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+      </MotionConfig>
     </div>
   );
 }
