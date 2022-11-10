@@ -5,6 +5,7 @@ import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import HeaderBlobs from '../components/headerBlobs';
 import ExternalLinkIcon from '../components/externalLinkIcon';
+import parse from 'html-react-parser';
 const { motion } = require('framer-motion');
 
 export async function getStaticProps() {
@@ -17,6 +18,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
+  console.log(allPostsData);
   return (
     <Layout home>
       <Head>
@@ -84,7 +86,7 @@ export default function Home({ allPostsData }) {
               <h3 className='project-title' key={id}>
                 <ExternalLinkIcon link={link}>{title}</ExternalLinkIcon>
               </h3>
-              <p className='project-description'>{description}</p>
+              <p className='project-description'>{parse(description)}</p>
               {linkText && (
                 <p>
                   <Link href={`/posts/${id}`}>
