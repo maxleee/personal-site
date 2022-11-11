@@ -18,7 +18,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-  console.log(allPostsData);
   return (
     <Layout home>
       <Head>
@@ -72,15 +71,7 @@ export default function Home({ allPostsData }) {
         {allPostsData.map(({ id, title, description, linkText, link, image }) => (
           <div className='project-wrapper' key={id}>
             <div className='project-image-wrapper'>
-              <Image
-                priority
-                src={image}
-                className='project-image'
-                alt=''
-                width={292}
-                height={186}
-                layout='intrinsic'
-              />
+              <img src={image} className='project-image' alt='' />
             </div>
             <div className='project-content'>
               <h3 className='project-title' key={id}>

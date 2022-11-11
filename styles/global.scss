@@ -165,8 +165,11 @@ main {
   place-content: center;
   grid-template-columns: repeat(2, minmax(200px, 500px));
   gap: 4rem;
-  margin-block: 4rem;
+  margin-block: 10rem;
   padding-inline: 4rem;
+  &:first-of-type {
+    margin-top: 6rem;
+  }
   @media (max-width: 600px) {
     grid-template-columns: 100%;
     gap: 1rem;
