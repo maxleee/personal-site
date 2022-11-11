@@ -51,10 +51,10 @@ export default function Home({ allPostsData }) {
       <section className='about'>
         <h2 className='title'>A creative and curious problem solver </h2>
         <p className='paragraph'>
-          I have spent the last 10 years in tech, healthcare, and marketing industries, where I have
-          had the privilege of working on a range of websites, design systems, and enterprise-level
-          email campaigns. I love to use design and code to make solutions that look good and are
-          easy for everyone to use.
+          As a designer and developer, I have leveraged my skills to create websites,
+          enterprise-level email campaigns, and design systems. In the last few years, I've come to
+          love coding more than designing, but in both mediums, solving complex problems with simple
+          solutions is the creative outlet that fuels me.
         </p>
       </section>
       <div className='intro-divider'></div>
