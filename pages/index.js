@@ -56,13 +56,6 @@ export default function Home({ allPostsData }) {
           email campaigns. I love to use design and code to make solutions that look good and are
           easy for everyone to use.
         </p>
-        <h3 className='about-subtitle'>Connect with Me</h3>
-        <div className='connect-link-wrapper'>
-          <ExternalLinkIcon link={'https://www.linkedin.com/in/max-orenzuk-66155a27'}>
-            LinkedIn
-          </ExternalLinkIcon>
-          <ExternalLinkIcon link={'https://github.com/maxleee'}>Github</ExternalLinkIcon>
-        </div>
       </section>
       <div className='intro-divider'></div>
       <section className='work'>
@@ -88,6 +81,16 @@ export default function Home({ allPostsData }) {
             </div>
           </div>
         ))}
+      </section>
+      <div className='intro-divider'></div>
+      <section className='contact'>
+        <h3 className='about-subtitle'>Connect with Me</h3>
+        <div className='connect-link-wrapper'>
+          <ExternalLinkIcon link={'https://www.linkedin.com/in/max-orenzuk-66155a27'}>
+            LinkedIn
+          </ExternalLinkIcon>
+          <ExternalLinkIcon link={'https://github.com/maxleee'}>Github</ExternalLinkIcon>
+        </div>
       </section>
     </Layout>
   );
