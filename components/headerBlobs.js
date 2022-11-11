@@ -6,7 +6,6 @@ export default function HeaderBlobs() {
   const boxRef = useRef();
   const handleMouseMove = e => {
     setMousePosition(getRelativeCoordinates(e, boxRef.current));
-    console.log(mousePosition);
   };
   function getRelativeCoordinates(event, referenceElement) {
     const position = {
