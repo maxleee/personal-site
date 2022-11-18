@@ -2,11 +2,10 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
-import HeaderBlobs from '../components/headerBlobs';
 import HeaderBlobsCSS from '../components/headerBlobsCSS';
 import ExternalLinkIcon from '../components/externalLinkIcon';
 import parse from 'html-react-parser';
-const { motion, useSpring, m } = require('framer-motion');
+const { motion } = require('framer-motion');
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -18,27 +17,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-  const scrollParent = {
-    hidden: {},
-    show: {
-      transition: {
-        delayChildren: 0.5,
-        staggerChildren: 0.25,
-      },
-    },
-  };
-  const scrollY = {
-    hidden: { opacity: 0, y: 100 },
-    show: { opacity: 1, y: 0, transition: { type: 'spring', bounce: 1, stiffness: 50 } },
-  };
-  const scrollLeft = {
-    hidden: { opacity: 0, x: -100 },
-    show: { opacity: 1, x: 0, transition: { type: 'spring', bounce: 1, stiffness: 50 } },
-  };
-  const scrollRight = {
-    hidden: { opacity: 0, x: 100 },
-    show: { opacity: 1, x: 0, transition: { type: 'spring', bounce: 1, stiffness: 50 } },
-  };
   return (
     <Layout home>
       <Head>
@@ -70,53 +48,38 @@ export default function Home({ allPostsData }) {
         {/* <HeaderBlobs /> */}
       </section>
       <div className='intro-divider'></div>
-      <motion.section
-        className='about'
-        variants={scrollParent}
-        initial='hidden'
-        whileInView='show'
-        viewport={{ once: true }}>
-        <motion.h2 className='title' variants={scrollY}>
-          A creative and curious problem solver{' '}
-        </motion.h2>
-        <motion.p className='paragraph' variants={scrollY}>
+      <section className='about'>
+        <h2 className='title'>A creative and curious problem solver </h2>
+        <p className='paragraph'>
           As a designer and developer, I have leveraged my skills to create websites,
           enterprise-level email campaigns, and design systems. In the last few years, I've come to
           love coding more than designing, but in both mediums, solving complex problems with simple
           solutions is the creative outlet that fuels me.
-        </motion.p>
-      </motion.section>
+        </p>
+      </section>
       <div className='intro-divider'></div>
       <section className='work'>
         <h2 className='title'>Recent Work</h2>
 
         {allPostsData.map(({ id, title, description, linkText, link, image }) => (
-          <motion.div
-            className='project-wrapper'
-            key={id}
-            variants={scrollParent}
-            initial='hidden'
-            whileInView='show'
-            viewport={{ once: true }}>
+          <div className='project-wrapper' key={id}>
             <div className='project-image-wrapper'>
-              <motion.img src={image} className='project-image' alt='' variants={scrollLeft} />
+              <img src={image} className='project-image' alt='' />
             </div>
             <div className='project-content'>
-              <motion.h3 className='project-title' key={id} variants={scrollRight}>
+              <h3 className='project-title' key={id}>
                 <ExternalLinkIcon link={link}>{title}</ExternalLinkIcon>
-              </motion.h3>
-              <motion.p className='project-description' variants={scrollRight}>
-                {parse(description)}
-              </motion.p>
+              </h3>
+              <p className='project-description'>{parse(description)}</p>
               {linkText && (
                 <p>
-                  <motion.Link href={`/posts/${id}`} variants={scrollRight}>
+                  <Link href={`/posts/${id}`}>
                     <a>{linkText}</a>
-                  </motion.Link>
+                  </Link>
                 </p>
               )}
             </div>
-          </motion.div>
+          </div>
         ))}
       </section>
       <div className='intro-divider'></div>
