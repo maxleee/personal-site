@@ -103,7 +103,7 @@ main {
 .intro,
 .about {
   place-self: center;
-  z-index: 10;
+  z-index: 20;
 }
 .intro {
   @media (max-width: 900px) {
@@ -231,4 +231,87 @@ main {
     width: 120%;
     top: -150px;
   }
+}
+
+//blobs
+.blobs-wrapper {
+  position: relative;
+  background-color: var(--light-green);
+}
+.pink-blob {
+  background-color: var(--pink);
+  position: absolute;
+  top: -100px;
+  right: -400px;
+  width: 680px;
+  height: 700px;
+  filter: blur(50px);
+  border-radius: 80%;
+  // mix-blend-mode: overlay;
+}
+.pink-blob-top {
+  background-color: var(--pink);
+  position: absolute;
+  top: -120px;
+  left: -50px;
+  width: 680px;
+  height: 450px;
+  filter: blur(50px);
+  border-radius: 80%;
+  // mix-blend-mode: overlay;
+}
+.mustard-circle {
+  background-color: var(--mustard);
+  position: absolute;
+  top: -100px;
+  left: -120px;
+  width: 540px;
+  height: 420px;
+  filter: blur(50px);
+  border-radius: 50%;
+  mix-blend-mode: overlay;
+}
+.mustard-oval {
+  background-color: var(--mustard);
+  position: absolute;
+  top: 140px;
+  left: 0px;
+  width: 496px;
+  height: 80px;
+  filter: blur(50px);
+  border-radius: 50%;
+  mix-blend-mode: overlay;
+}
+.green-oval-top {
+  background-color: var(--dark-green);
+  position: absolute;
+  top: -200px;
+  left: 50px;
+  width: 630px;
+  height: 350px;
+  filter: blur(50px);
+  border-radius: 50%;
+  mix-blend-mode: darken;
+}
+.green-oval-side {
+  background-color: var(--dark-green);
+  position: absolute;
+  top: -60px;
+  right: -350px;
+  width: 500px;
+  height: 600px;
+  filter: blur(50px);
+  border-radius: 50%;
+  // mix-blend-mode: overlay;
+}
+.noise-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: url(#noiseFilter) brightness(0.8) contrast(1.1);
+  mix-blend-mode: overlay;
+  z-index: 10;
+  pointer-events: none;
 }

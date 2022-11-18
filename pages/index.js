@@ -3,6 +3,7 @@ import Layout, { siteTitle } from '../components/layout';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import HeaderBlobs from '../components/headerBlobs';
+import HeaderBlobsCSS from '../components/headerBlobsCSS';
 import ExternalLinkIcon from '../components/externalLinkIcon';
 import parse from 'html-react-parser';
 const { motion, useSpring, m } = require('framer-motion');
@@ -65,7 +66,8 @@ export default function Home({ allPostsData }) {
         </div>
         <div className='intro-divider'></div>
 
-        <HeaderBlobs />
+        <HeaderBlobsCSS />
+        {/* <HeaderBlobs /> */}
       </section>
       <div className='intro-divider'></div>
       <motion.section
