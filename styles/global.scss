@@ -90,6 +90,7 @@ main {
   height: 500px;
   padding-inline: 5rem;
   position: relative;
+  overflow: hidden;
   @media (max-width: 900px) {
     grid-template-columns: 100%;
     grid-template-rows: 200px min-content 1px auto;
