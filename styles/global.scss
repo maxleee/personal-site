@@ -89,7 +89,7 @@ main {
   position: relative;
   @media (max-width: 900px) {
     grid-template-columns: 100%;
-    grid-template-rows: 500px 1px auto;
+    grid-template-rows: 300px 500px 1px auto;
     padding-inline: 3rem;
     .intro-divider {
       display: none;
@@ -109,6 +109,7 @@ main {
   @media (max-width: 900px) {
     place-self: end;
     margin-bottom: 2rem;
+    grid-row: 2;
   }
 }
 .intro-divider {
@@ -237,6 +238,10 @@ main {
 .blobs-wrapper {
   position: relative;
   background-color: var(--light-green);
+  @media (max-width: 900px) {
+    transform: scale(0.75);
+    grid-row: 1;
+  }
 }
 .pink-blob {
   background-color: var(--pink);
