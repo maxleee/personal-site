@@ -251,6 +251,11 @@ main {
   filter: blur(50px);
   border-radius: 80%;
   // mix-blend-mode: overlay;
+  @media (max-width: 900px) {
+    width: 65vw;
+    height: 66vw;
+    right: -55vw;
+  }
 }
 .pink-blob-top {
   background-color: var(--pink);
@@ -262,6 +267,12 @@ main {
   filter: blur(50px);
   border-radius: 80%;
   // mix-blend-mode: overlay;
+  @media (max-width: 900px) {
+    width: 65vw;
+    height: 46vw;
+    right: 18vw;
+    top: -22lvh;
+  }
 }
 .mustard-circle {
   background-color: var(--mustard);
@@ -273,6 +284,11 @@ main {
   filter: blur(50px);
   border-radius: 50%;
   mix-blend-mode: overlay;
+  @media (max-width: 900px) {
+    width: 54vw;
+    height: 35vw;
+    right: 10vw;
+  }
 }
 .mustard-oval {
   background-color: var(--mustard);
@@ -284,6 +300,12 @@ main {
   filter: blur(50px);
   border-radius: 50%;
   mix-blend-mode: overlay;
+  @media (max-width: 900px) {
+    width: 50vw;
+    height: 12vw;
+    right: 12vw;
+    top: 5vw;
+  }
 }
 .green-oval-top {
   background-color: var(--dark-green);
@@ -295,6 +317,12 @@ main {
   filter: blur(50px);
   border-radius: 50%;
   mix-blend-mode: darken;
+  @media (max-width: 900px) {
+    width: 60vw;
+    height: 39vw;
+    right: 0;
+    top: -17vw;
+  }
 }
 .green-oval-side {
   background-color: var(--dark-green);
@@ -306,7 +334,14 @@ main {
   filter: blur(50px);
   border-radius: 50%;
   // mix-blend-mode: overlay;
+  @media (max-width: 900px) {
+    width: 51vw;
+    height: 59vw;
+    right: -34vw;
+    top: -30vw;
+  }
 }
+
 .noise-layer {
   position: fixed;
   top: 0;
