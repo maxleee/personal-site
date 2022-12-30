@@ -6,6 +6,10 @@
   --pink: #ffa8ba;
   --salmon: #fa5246;
   --blue: #106173;
+  --blob-blur: 50px;
+  @media (max-width: 600px) {
+    --blob-blur: 30px;
+  }
 }
 
 body {
@@ -35,7 +39,6 @@ h6 {
 
 a {
   color: var(--blue);
-  text-decoration: none;
 }
 
 a:hover {
@@ -89,13 +92,15 @@ main {
   position: relative;
   @media (max-width: 900px) {
     grid-template-columns: 100%;
-    grid-template-rows: 500px 1px auto;
+    grid-template-rows: 200px min-content 1px auto;
     padding-inline: 3rem;
+    height: unset;
     .intro-divider {
       display: none;
     }
   }
   @media (max-width: 600px) {
+    grid-template-rows: 100px min-content 1px auto;
     padding-inline: 2rem;
   }
 }
@@ -106,9 +111,12 @@ main {
   z-index: 20;
 }
 .intro {
+  padding-right: 2rem;
   @media (max-width: 900px) {
-    place-self: end;
+    place-self: start;
     margin-bottom: 2rem;
+    grid-row: 2;
+    padding-right: unset;
   }
 }
 .intro-divider {
@@ -198,6 +206,12 @@ main {
   color: #2f3b37;
   margin-block: 0.5rem;
   font-size: 1.5rem;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 .external-link {
   display: flex;
@@ -236,74 +250,119 @@ main {
 //blobs
 .blobs-wrapper {
   position: relative;
-  background-color: var(--light-green);
+  @media (max-width: 900px) {
+    grid-row: 1;
+  }
 }
 .pink-blob {
   background-color: var(--pink);
   position: absolute;
-  top: -100px;
-  right: -400px;
-  width: 680px;
-  height: 700px;
-  filter: blur(50px);
+  top: -8lvh;
+  right: -34vw;
+  width: 55vw;
+  height: 56vw;
+  filter: blur(var(--blob-blur));
   border-radius: 80%;
   // mix-blend-mode: overlay;
+  @media (max-width: 900px) {
+    width: 65vw;
+    height: 66vw;
+    right: -55vw;
+  }
+  @media (max-width: 600px) {
+    width: 75vw;
+  }
 }
 .pink-blob-top {
   background-color: var(--pink);
   position: absolute;
-  top: -120px;
-  left: -50px;
-  width: 680px;
-  height: 450px;
-  filter: blur(50px);
+  top: -20lvh;
+  right: -16vw;
+  width: 55vw;
+  height: 36vw;
+  filter: blur(var(--blob-blur));
   border-radius: 80%;
   // mix-blend-mode: overlay;
+  @media (max-width: 900px) {
+    width: 65vw;
+    height: 46vw;
+    right: 18vw;
+    top: -22lvh;
+  }
 }
 .mustard-circle {
   background-color: var(--mustard);
   position: absolute;
-  top: -100px;
-  left: -120px;
-  width: 540px;
-  height: 420px;
-  filter: blur(50px);
+  top: -8vw;
+  right: -1vw;
+  width: 44vw;
+  height: 35vw;
+  filter: blur(var(--blob-blur));
   border-radius: 50%;
   mix-blend-mode: overlay;
+  @media (max-width: 900px) {
+    width: 54vw;
+    height: 35vw;
+    right: 10vw;
+  }
+  @media (max-width: 600px) {
+    width: 65vw;
+  }
 }
 .mustard-oval {
   background-color: var(--mustard);
   position: absolute;
-  top: 140px;
-  left: 0px;
-  width: 496px;
-  height: 80px;
-  filter: blur(50px);
+  top: 11vw;
+  right: -8vw;
+  width: 40vw;
+  height: 7vw;
+  filter: blur(var(--blob-blur));
   border-radius: 50%;
   mix-blend-mode: overlay;
+  @media (max-width: 900px) {
+    width: 50vw;
+    height: 12vw;
+    right: 12vw;
+    top: 5vw;
+  }
 }
 .green-oval-top {
   background-color: var(--dark-green);
   position: absolute;
-  top: -200px;
-  left: 50px;
-  width: 630px;
-  height: 350px;
-  filter: blur(50px);
+  top: -16vw;
+  right: -23vw;
+  width: 50vw;
+  height: 29vw;
+  filter: blur(var(--blob-blur));
   border-radius: 50%;
   mix-blend-mode: darken;
+  @media (max-width: 900px) {
+    width: 60vw;
+    height: 39vw;
+    right: 0;
+    top: -17vw;
+  }
+  @media (max-width: 600px) {
+  }
 }
 .green-oval-side {
   background-color: var(--dark-green);
   position: absolute;
-  top: -60px;
-  right: -350px;
-  width: 500px;
-  height: 600px;
-  filter: blur(50px);
+  top: -6vw;
+  right: -28vw;
+  width: 41vw;
+  height: 49vw;
+  filter: blur(var(--blob-blur));
   border-radius: 50%;
   // mix-blend-mode: overlay;
+  @media (max-width: 900px) {
+    width: 51vw;
+    height: 59vw;
+    right: -34vw;
+    top: -30vw;
+  }
 }
+
 .noise-layer {
   position: fixed;
   top: 0;
