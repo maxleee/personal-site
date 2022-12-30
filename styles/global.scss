@@ -89,7 +89,7 @@ main {
   position: relative;
   @media (max-width: 900px) {
     grid-template-columns: 100%;
-    grid-template-rows: 300px 500px 1px auto;
+    grid-template-rows: 200px 500px 1px auto;
     padding-inline: 3rem;
     .intro-divider {
       display: none;
@@ -107,7 +107,7 @@ main {
 }
 .intro {
   @media (max-width: 900px) {
-    place-self: end;
+    place-self: start;
     margin-bottom: 2rem;
     grid-row: 2;
   }
@@ -237,19 +237,17 @@ main {
 //blobs
 .blobs-wrapper {
   position: relative;
-  background-color: var(--light-green);
   @media (max-width: 900px) {
-    transform: scale(0.75);
     grid-row: 1;
   }
 }
 .pink-blob {
   background-color: var(--pink);
   position: absolute;
-  top: -100px;
-  right: -400px;
-  width: 680px;
-  height: 700px;
+  top: -8lvh;
+  right: -34vw;
+  width: 55vw;
+  height: 56vw;
   filter: blur(50px);
   border-radius: 80%;
   // mix-blend-mode: overlay;
@@ -257,10 +255,10 @@ main {
 .pink-blob-top {
   background-color: var(--pink);
   position: absolute;
-  top: -120px;
-  left: -50px;
-  width: 680px;
-  height: 450px;
+  top: -20lvh;
+  left: -6vw;
+  width: 55vw;
+  height: 36vw;
   filter: blur(50px);
   border-radius: 80%;
   // mix-blend-mode: overlay;
@@ -268,10 +266,10 @@ main {
 .mustard-circle {
   background-color: var(--mustard);
   position: absolute;
-  top: -100px;
-  left: -120px;
-  width: 540px;
-  height: 420px;
+  top: -8vw;
+  left: -10vw;
+  width: 44vw;
+  height: 35vw;
   filter: blur(50px);
   border-radius: 50%;
   mix-blend-mode: overlay;
@@ -279,10 +277,10 @@ main {
 .mustard-oval {
   background-color: var(--mustard);
   position: absolute;
-  top: 140px;
+  top: 11vw;
   left: 0px;
-  width: 496px;
-  height: 80px;
+  width: 40vw;
+  height: 7vw;
   filter: blur(50px);
   border-radius: 50%;
   mix-blend-mode: overlay;
@@ -290,10 +288,10 @@ main {
 .green-oval-top {
   background-color: var(--dark-green);
   position: absolute;
-  top: -200px;
-  left: 50px;
-  width: 630px;
-  height: 350px;
+  top: -16vw;
+  left: 8vw;
+  width: 50vw;
+  height: 29vw;
   filter: blur(50px);
   border-radius: 50%;
   mix-blend-mode: darken;
@@ -301,10 +299,10 @@ main {
 .green-oval-side {
   background-color: var(--dark-green);
   position: absolute;
-  top: -60px;
-  right: -350px;
-  width: 500px;
-  height: 600px;
+  top: -6vw;
+  right: -28vw;
+  width: 41vw;
+  height: 49vw;
   filter: blur(50px);
   border-radius: 50%;
   // mix-blend-mode: overlay;
