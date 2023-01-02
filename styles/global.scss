@@ -58,6 +58,7 @@ main {
   display: grid;
   grid-template-rows: min-content 1px min-content 1px min-content 1px min-content;
   z-index: 10;
+  overflow: hidden;
 }
 
 .main-heading {
@@ -90,7 +91,7 @@ main {
   height: 500px;
   padding-inline: 5rem;
   position: relative;
-  overflow: hidden;
+
   @media (max-width: 900px) {
     grid-template-columns: 100%;
     grid-template-rows: 200px min-content 1px auto;
@@ -201,6 +202,9 @@ main {
 }
 .project-image-wrapper {
   place-self: center;
+  .project-image {
+    max-width: 300px;
+  }
 }
 
 .project-title {
