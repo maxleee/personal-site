@@ -3,6 +3,11 @@ title: 'SVG Map Generator'
 description: 'This tool allows users to create coverage maps quickly. Creating maps was a tedious process that required design and development resources, but now anyone can easily create a coverage map on their own. In addition to saving time, the tool also allows for increased accessibility of the map content by using a thoughtfully constructed SVG instead of a JPG.'
 link: 'https://friendly-bubblegum-837166.netlify.app'
 image: '/images/map-generator.svg'
+intro: 'When I started working at UPMC Health Plan, creating coverage maps was a tedious, time-consuming process. I wanted to make it easier for anyone on our team to create a map, so I created a new utility that would allow us to make maps quickly and easily. The utility also works better than our previous method because it uses carefully crafted SVG markup instead of a JPG, so that users using assistive technology can access the content of the maps.'
+introImage: '/images/CoverageMapGenerator.png'
+tags:
+  - 'React'
+  - 'SVG'
 ---
 
 Coverage maps are used across the UPMC Health Plan website to communicate which insurance plans and coverage options are available across the state of Pennsylvania.

@@ -24,11 +24,30 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
-        <h1>{postData.title}</h1>
-
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </article>
+      <section className='project-detail-intro'>
+        <div className='project-detail-intro-content'>
+          <h1 className='project-title'>{postData.title}</h1>
+          <a href={postData.link} className='button-link'>
+            Visit Site
+          </a>
+          <p>{postData.intro}</p>
+          <p>
+            <strong>Built with</strong>
+          </p>
+          {postData.tags.map(tag => (
+            <p className='tag'>{tag}</p>
+          ))}
+        </div>
+        <div className='project-detail-intro-image'>
+          <img
+            src={postData.introImage}
+            alt='Screenshot of Map Generator interface with checkbox lists of counties and preview of generated map.'
+          />
+        </div>
+      </section>
+      <div className='intro-divider'></div>
+      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div className='intro-divider'></div>
     </Layout>
   );
 }
