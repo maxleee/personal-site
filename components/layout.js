@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import ButtonLink from './buttonLink';
 
 const { MotionConfig } = require('framer-motion');
 
@@ -23,17 +24,13 @@ export default function Layout({ children, home }) {
           <></>
         ) : (
           <header>
-            <Link href='/'>
-              <a className='button-link'>Home</a>
-            </Link>
+            <ButtonLink href='/'>Home</ButtonLink>
           </header>
         )}
         <main>{children}</main>
         {!home && (
           <div>
-            <Link href='/'>
-              <a>← Back to home</a>
-            </Link>
+            <Link href='/'>← Back to home</Link>
           </div>
         )}
       </MotionConfig>

@@ -1,6 +1,7 @@
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
+import ButtonLink from '../../components/buttonLink';
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -27,9 +28,11 @@ export default function Post({ postData }) {
       <section className='project-detail-intro'>
         <div className='project-detail-intro-content'>
           <h1 className='project-title'>{postData.title}</h1>
-          <a href={postData.link} className='button-link'>
+
+          <ButtonLink href={postData.link} icon={{ type: 'external', position: 'end' }}>
             Visit Site
-          </a>
+          </ButtonLink>
+
           <p>{postData.intro}</p>
           <p>
             <strong>Built with</strong>
