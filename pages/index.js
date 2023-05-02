@@ -51,10 +51,12 @@ export default function Home({ allPostsData }) {
       <section className='about'>
         <h2 className='title'>A creative and curious problem solver </h2>
         <p className='paragraph'>
-          As a designer and developer, I have leveraged my skills to create websites,
-          enterprise-level email campaigns, and design systems. In the last few years, I've come to
-          love coding more than designing, but in both mediums, solving complex problems with simple
-          solutions is the creative outlet that fuels me.
+          As a designer and front end developer with over a decade of experience, I bring a unique
+          blend of creativity and technical expertise to every project. In my current role I focus
+          on design systems, building sites and emails using HTML, CSS, Javascript, React, and
+          Gatsby, and elevating an existing brand in the digital marketing landscape. I believe in
+          creating with empathy, always keeping the end user in mind, and striving to create
+          experiences that are accessible, intuitive, and user-friendly.
         </p>
       </section>
       <div className='intro-divider'></div>
