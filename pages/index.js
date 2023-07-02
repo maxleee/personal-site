@@ -75,9 +75,7 @@ export default function Home({ allPostsData }) {
               <p className='project-description'>{parse(description)}</p>
               {linkText && (
                 <p>
-                  <Link href={`/posts/${id}`}>
-                    <a>{linkText}</a>
-                  </Link>
+                  <Link href={`/posts/${id}`}>{linkText}</Link>
                 </p>
               )}
             </div>

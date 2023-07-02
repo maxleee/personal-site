@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const { MotionConfig } = require('framer-motion');
@@ -20,21 +19,11 @@ export default function Layout({ children, home }) {
         />
       </Head>
       <MotionConfig reducedMotion='user'>
-        <header>
-          {home ? (
-            <></>
-          ) : (
-            <Link href='/'>
-              <a>Home</a>
-            </Link>
-          )}
-        </header>
+        <header>{home ? <></> : <Link href='/'>Home</Link>}</header>
         <main>{children}</main>
         {!home && (
           <div>
-            <Link href='/'>
-              <a>← Back to home</a>
-            </Link>
+            <Link href='/'>← Back to home</Link>
           </div>
         )}
       </MotionConfig>
