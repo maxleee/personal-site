@@ -404,6 +404,7 @@ header {
 .project-detail-intro {
   padding-inline: 5rem;
   display: flex;
+  margin-block-end: 5rem;
 }
 .project-detail-intro-content {
   width: 50%;
@@ -424,4 +425,17 @@ header {
 }
 .project-detail-intro-image {
   width: 50%;
+}
+
+.project-detail-body {
+  max-width: 37.5rem;
+  margin-block: 5rem;
+  margin-inline: auto;
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--dark-green);
+  }
 }
