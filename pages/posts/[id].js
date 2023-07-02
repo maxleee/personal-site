@@ -38,7 +38,9 @@ export default function Post({ postData }) {
             <strong>Built with</strong>
           </p>
           {postData.tags.map(tag => (
-            <p className='tag'>{tag}</p>
+            <p className='tag' key={tag}>
+              {tag}
+            </p>
           ))}
         </div>
         <div className='project-detail-intro-image'>

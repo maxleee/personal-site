@@ -20,15 +20,15 @@ export default function Layout({ children, home }) {
         />
       </Head>
       <MotionConfig reducedMotion='user'>
-        <header>
-          {home ? (
-            <></>
-          ) : (
-            <Link href='/'>
-              <a>Home</a>
-            </Link>
-          )}
-        </header>
+        {home ? (
+          <></>
+        ) : (
+          <header>
+            <ButtonLink href='/' icon={{ type: 'home', position: 'start' }}>
+              Home
+            </ButtonLink>
+          </header>
+        )}
         <main>{children}</main>
         {!home && (
           <div>
