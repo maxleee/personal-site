@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import ButtonLink from './buttonLink';
 
@@ -12,6 +11,7 @@ export default function Layout({ children, home }) {
     <div>
       <Head>
         <meta name='description' content='Max Orenzuk, a designer and front end developer' />
+        <meta name='description' content='Max Orenzuk, a designer and front end developer' />
         <meta name='og:title' content={siteTitle} />
         <meta name='twitter:card' content='summary_large_image' />
         <link
@@ -20,13 +20,15 @@ export default function Layout({ children, home }) {
         />
       </Head>
       <MotionConfig reducedMotion='user'>
-        {home ? (
-          <></>
-        ) : (
-          <header>
-            <ButtonLink href='/'>Home</ButtonLink>
-          </header>
-        )}
+        <header>
+          {home ? (
+            <></>
+          ) : (
+            <Link href='/'>
+              <a>Home</a>
+            </Link>
+          )}
+        </header>
         <main>{children}</main>
         {!home && (
           <div>
