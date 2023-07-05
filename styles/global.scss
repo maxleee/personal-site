@@ -218,6 +218,16 @@ main {
     }
   }
 }
+
+.project-button-wrapper {
+  margin-block: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  a.external-link {
+    font-size: 1rem;
+  }
+}
 .external-link {
   display: flex;
   align-items: center;
