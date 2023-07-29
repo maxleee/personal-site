@@ -81,7 +81,11 @@ export default function Home({ allPostsData }) {
                 <Link className='more-link' href={`/posts/${id}`}>
                   Read More
                 </Link> */}
-                {intro && <ButtonLink href={`/posts/${id}`}>Read More</ButtonLink>}
+                {intro && (
+                  <ButtonLink href={`/posts/${id}`} size='large'>
+                    Read More
+                  </ButtonLink>
+                )}
                 <ExternalLinkIcon link={link}>Visit {title}</ExternalLinkIcon>
               </div>
             </div>
