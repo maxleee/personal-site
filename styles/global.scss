@@ -25,6 +25,7 @@ body {
   font-size: 18px;
   background-color: var(--light-green);
   height: 100vh;
+  color: var(--gray);
 }
 
 h1,
@@ -58,6 +59,13 @@ img {
 
 p {
   color: var(--gray);
+}
+ol,
+ul {
+  margin: 0;
+}
+.project-detail-body li {
+  margin-bottom: 0.5rem;
 }
 
 main {
@@ -475,7 +483,7 @@ header {
 }
 
 .project-detail-body {
-  max-width: 37.5rem;
+  max-width: 40rem;
   margin-block: 5rem;
   margin-inline: auto;
   h2,
