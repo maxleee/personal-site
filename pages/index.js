@@ -5,6 +5,7 @@ import Link from 'next/link';
 import HeaderBlobsCSS from '../components/headerBlobsCSS';
 import ExternalLinkIcon from '../components/externalLinkIcon';
 import ButtonLink from '../components/buttonLink';
+import TableList from '../components/tableList';
 import parse from 'html-react-parser';
 const { motion } = require('framer-motion');
 
@@ -37,7 +38,7 @@ export default function Home({ allPostsData }) {
               </motion.div>{' '}
               I'm Max
             </span>
-            a visual designer and frontend developer
+            a designer and frontend developer
           </h1>
           <p className='tagline'>
             I enjoy finding solutions to complex problems and learning a few things along the way.
@@ -59,31 +60,33 @@ export default function Home({ allPostsData }) {
           creating with empathy, always keeping the end user in mind, and striving to create
           experiences that are accessible, intuitive, and user-friendly.
         </p>
-        <div className='table-list'>
-          <h3 className='table-list--title pink'>Frontend Skills</h3>
-          <ul className='table-list--list'>
-            <li className='table-list--item'>HTML</li>
-            <li className='table-list--item'>CSS/SCSS</li>
-            <li className='table-list--item'>JavaScript</li>
-            <li className='table-list--item'>React</li>
-            <li className='table-list--item'>Gatsby</li>
-            <li className='table-list--item'>Accessibility</li>
-            <li className='table-list--item'>SVG</li>
-            <li className='table-list--item'>HTML Emails</li>
-          </ul>
-        </div>
-        <div className='table-list'>
-          <h3 className='table-list--title mustard'>Design Skills</h3>
-          <ul className='table-list--list'>
-            <li className='table-list--item'>UI/Visual Design</li>
-            <li className='table-list--item'>Design Systems</li>
-            <li className='table-list--item'>Web Design</li>
-            <li className='table-list--item'>Email Design</li>
-            <li className='table-list--item'>Social and Display Ads</li>
-            <li className='table-list--item'>Figma</li>
-            <li className='table-list--item'>Adobe Suite</li>
-          </ul>
-        </div>
+        <TableList
+          color='pink'
+          header='Front End Skills'
+          items={[
+            'HTML',
+            'CSS/SCSS',
+            'JavaScript',
+            'React',
+            'Gatsby',
+            'Accessibility',
+            'SVG',
+            'HTML Emails',
+          ]}
+        />
+        <TableList
+          color='mustard'
+          header='Design Skills'
+          items={[
+            'UI/Visual Design',
+            'Design Systems',
+            'Web Design',
+            'Email Design',
+            'Social and Display Ads',
+            'Figma',
+            'Adobe Suite',
+          ]}
+        />
       </section>
       <div className='intro-divider'></div>
       <section className='work'>
