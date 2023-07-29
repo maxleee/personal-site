@@ -6,6 +6,7 @@
   --pink: #ffa8ba;
   --salmon: #fa5246;
   --blue: #106173;
+  --blue-darker: #0b434f;
   --blob-blur: 50px;
   @media (max-width: 600px) {
     --blob-blur: 30px;
@@ -39,9 +40,11 @@ h6 {
 
 a {
   color: var(--blue);
+  transition: 0.3s ease;
 }
 
 a:hover {
+  color: var(--blue-darker);
   text-decoration: underline;
 }
 
@@ -222,7 +225,7 @@ main {
 .project-button-wrapper {
   margin-block: 1rem;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: center;
   a.external-link {
     font-size: 1rem;
@@ -406,9 +409,25 @@ header {
   align-items: center;
   gap: 0.5rem;
   width: fit-content;
+  transition: 0.3s ease;
 
   svg {
     height: 0.875rem;
+  }
+  &.large {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+
+    &:hover {
+      background-color: var(--blue-darker);
+      color: var(--blue);
+      transform: scale(1.02);
+    }
+  }
+  &:hover {
+    background-color: var(--blue-darker);
+    text-decoration: none;
+    color: var(--light-green);
   }
 }
 .project-detail-intro {
