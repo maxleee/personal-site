@@ -31,14 +31,16 @@ export default function Post({ postData }) {
           <h1 className='project-title'>{postData.title}</h1>
           <p>{postData.intro}</p>
           <ExternalLinkIcon link={postData.link}>Visit {postData.title}</ExternalLinkIcon>
-          <p>
-            <strong>Built with</strong>
-          </p>
-          {postData.tags.map(tag => (
-            <p className='tag' key={tag}>
-              {tag}
-            </p>
-          ))}
+          <div className='table-list'>
+            <h3 className='table-list--title'>Built With</h3>
+            <ul className='table-list--list'>
+              {postData.tags.map(tag => (
+                <li className='table-list--item' key={tag}>
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className='project-detail-intro-image'>
           <img

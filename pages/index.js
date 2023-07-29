@@ -59,6 +59,31 @@ export default function Home({ allPostsData }) {
           creating with empathy, always keeping the end user in mind, and striving to create
           experiences that are accessible, intuitive, and user-friendly.
         </p>
+        <div className='table-list'>
+          <h3 className='table-list--title pink'>Frontend Skills</h3>
+          <ul className='table-list--list'>
+            <li className='table-list--item'>HTML</li>
+            <li className='table-list--item'>CSS/SCSS</li>
+            <li className='table-list--item'>JavaScript</li>
+            <li className='table-list--item'>React</li>
+            <li className='table-list--item'>Gatsby</li>
+            <li className='table-list--item'>Accessibility</li>
+            <li className='table-list--item'>SVG</li>
+            <li className='table-list--item'>HTML Emails</li>
+          </ul>
+        </div>
+        <div className='table-list'>
+          <h3 className='table-list--title mustard'>Design Skills</h3>
+          <ul className='table-list--list'>
+            <li className='table-list--item'>UI/Visual Design</li>
+            <li className='table-list--item'>Design Systems</li>
+            <li className='table-list--item'>Web Design</li>
+            <li className='table-list--item'>Email Design</li>
+            <li className='table-list--item'>Social and Display Ads</li>
+            <li className='table-list--item'>Figma</li>
+            <li className='table-list--item'>Adobe Suite</li>
+          </ul>
+        </div>
       </section>
       <div className='intro-divider'></div>
       <section className='work'>
