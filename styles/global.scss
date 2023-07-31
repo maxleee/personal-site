@@ -494,3 +494,39 @@ header {
     color: var(--dark-green);
   }
 }
+
+.table-list {
+  margin-block: 2rem;
+  .table-list--title {
+    font-family: var(--body-font-family);
+    background-color: var(--pink);
+    color: #621625;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid var(--gray);
+    border-bottom-color: var(--pink);
+    padding: 0.25rem 0.875rem;
+    display: inline-block;
+    margin: 0;
+    &.mustard {
+      background-color: var(--mustard);
+      color: #48330e;
+    }
+  }
+  .table-list--list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    .table-list--item {
+      list-style-type: none;
+      font-size: 0.875rem;
+      padding: 0.75rem 1.375rem;
+      border: 1px solid var(--gray);
+      background: var(--light-green);
+      margin-right: -1px;
+      margin-bottom: -1px;
+    }
+  }
+}

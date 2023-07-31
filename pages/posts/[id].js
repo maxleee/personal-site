@@ -1,8 +1,8 @@
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
-import ButtonLink from '../../components/buttonLink';
 import ExternalLinkIcon from '../../components/externalLinkIcon';
+import TableList from '../../components/tableList';
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -31,14 +31,7 @@ export default function Post({ postData }) {
           <h1 className='project-title'>{postData.title}</h1>
           <p>{postData.intro}</p>
           <ExternalLinkIcon link={postData.link}>Visit {postData.title}</ExternalLinkIcon>
-          <p>
-            <strong>Built with</strong>
-          </p>
-          {postData.tags.map(tag => (
-            <p className='tag' key={tag}>
-              {tag}
-            </p>
-          ))}
+          <TableList header='Built With' items={postData.tags} />
         </div>
         <div className='project-detail-intro-image'>
           <img
