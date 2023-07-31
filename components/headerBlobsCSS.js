@@ -52,15 +52,15 @@ export default function HeaderBlobs() {
   };
 
   const yellowBlob = {
-    init: {},
+    init: { translateX: 0, translateY: 0 },
     hover: { translateX: mousePosition.yellowX, translateY: mousePosition.yellowY },
   };
   const greenBlobX = {
-    init: {},
+    init: { translateX: 0, translateY: 0 },
     hover: { translateX: 30, translateY: mousePosition.greenY },
   };
   const greenBlobY = {
-    init: {},
+    init: { translateX: 0, scale: 1 },
     hover: { translateX: mousePosition.greenX, scale: mousePosition.scaleY },
   };
 
@@ -81,18 +81,21 @@ export default function HeaderBlobs() {
           variants={greenBlobY}
           animate='hover'
           initial='init'
+          style={{ translateX: 0, translateY: 0 }}
           transition={{ type: 'spring', stiffness: 100 }}></motion.div>
         <motion.div
           className='green-oval-top'
           variants={greenBlobX}
           animate='hover'
           initial='init'
+          style={{ translateX: 0, translateY: 0 }}
           transition={{ type: 'spring', stiffness: 25 }}></motion.div>
         <div className='mustard-oval'></div>
         <motion.div
           className='mustard-circle'
           variants={yellowBlob}
           animate='hover'
+          style={{ translateX: 0, translateY: 0 }}
           transition={{ type: 'spring', stiffness: 50 }}></motion.div>
       </motion.div>
 
