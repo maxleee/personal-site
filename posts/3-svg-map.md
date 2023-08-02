@@ -20,9 +20,16 @@ However, using JPGs on the website raised concerns regarding accessibility. If t
 
 To address this issue, I took the initiative to create SVG versions of the maps with a code structure that emulates lists, thereby enabling screen reader users to perceive the content just as effectively as sighted users.
 
-The SVG structure consisted of a parent list containing sub-lists for each grouping of counties. Each sub-list was equipped with a title element that described its content, such as 'Product not available in these counties.' Moreover, the counties within each sub-list were listed alphabetically, with each county name represented in a title element.
+The SVG structure consists of a parent list containing sub-lists for each grouping of counties. Each sub-list is equipped with a title element that described its content, such as 'Product not available in these counties.' The counties within each sub-list are listed alphabetically, with each county name represented in a title element.
 
-//Code example here
+This CodePen shows an abbreviated example of the SVG structure.
+
+<p class="codepen" data-height="300" data-default-tab="html" data-slug-hash="ZEmwLYP" data-user="maxleee" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/maxleee/pen/ZEmwLYP">
+  SVG Map Syntax</a> by Max (<a href="https://codepen.io/maxleee">@maxleee</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## SVG was an improvement, but tedious
 
