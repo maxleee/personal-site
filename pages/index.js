@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import { getSortedPostsData } from '../lib/posts';
+import { allPosts } from 'contentlayer/generated';
 import Link from 'next/link';
 import HeaderBlobsCSS from '../components/headerBlobsCSS';
 import ExternalLinkIcon from '../components/externalLinkIcon';
@@ -18,7 +19,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ allPostsData }) {
+export default function Home() {
   return (
     <Layout home>
       <Head>
@@ -92,15 +93,13 @@ export default function Home({ allPostsData }) {
       <section className='work'>
         <h2 className='title'>Recent Work</h2>
 
-        {allPostsData.map(({ id, title, description, intro, link, image }) => (
+        {allPosts.map(({ id, title, description, intro, link, image }) => (
           <div className='project-wrapper' key={id}>
             <div className='project-image-wrapper'>
               <img src={image} className='project-image' alt='' />
             </div>
             <div className='project-content'>
-              <h3 className='project-title' key={id}>
-                {title}
-              </h3>
+              <h3 className='project-title'>{title}</h3>
               <p className='project-description'>{parse(description)}</p>
               <div className='project-button-wrapper'>
                 {/* <ButtonLink href={link} icon={{ type: 'external', position: 'end' }}>
