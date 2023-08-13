@@ -44,7 +44,7 @@ export default function Post({ postData }) {
       </section>
       <div className='intro-divider'></div>
       <section className='project-detail-body'>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: postData.body.html }} />
       </section>
       <div className='intro-divider'></div>
     </Layout>
