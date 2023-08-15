@@ -1,6 +1,7 @@
 import Layout from '../../components/layout';
 // import { getAllPostIds, getPostData } from '../../lib/posts';
 import { allPosts } from 'contentlayer/generated';
+import { useMDXComponent } from 'next-contentlayer/hooks';
 import Head from 'next/head';
 import ExternalLinkIcon from '../../components/externalLinkIcon';
 import TableList from '../../components/tableList';
@@ -23,6 +24,7 @@ export async function getStaticPaths() {
   };
 }
 export default function Post({ postData }) {
+  const MDXContent = useMDXComponent(postData.body.code);
   return (
     <Layout>
       <Head>
@@ -44,7 +46,8 @@ export default function Post({ postData }) {
       </section>
       <div className='intro-divider'></div>
       <section className='project-detail-body'>
-        <div dangerouslySetInnerHTML={{ __html: postData.body.html }} />
+        {/* <div dangerouslySetInnerHTML={{ __html: postData.body.html }} /> */}
+        <MDXContent />
       </section>
       <div className='intro-divider'></div>
     </Layout>
