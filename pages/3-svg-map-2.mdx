@@ -1,18 +1,24 @@
----
-title: 'SVG Map Generator'
-description: 'A user-friendly web app developed at UPMC Health Plan, enabling effortless creation of SVG-based maps to communicate insurance plans and coverage options across Pennsylvania. Its iterative development provided multi-category support, increased accessibility, and time-saving benefits for designers, product managers, and more.'
-link: 'https://friendly-bubblegum-837166.netlify.app'
-image: '/images/map-generator.svg'
-intro: 'A React application that enables users to create SVG coverage maps by marking counties as "included" or "not included", along with customizable titles. Its intuitive interface and iterative improvements made it a valuable time-saving tool for various team members, while  enhancing accessibility for all users.'
-introImage: '/images/CoverageMapGenerator.png'
-tags:
-  - 'React'
-  - 'SVG'
----
+export const meta = {
+  title: 'SVG Map Generator',
+  description:
+    'A user-friendly web app developed at UPMC Health Plan, enabling effortless creation of SVG-based maps to communicate insurance plans and coverage options across Pennsylvania. Its iterative development provided multi-category support, increased accessibility, and time-saving benefits for designers, product managers, and more.',
+  link: 'https://friendly-bubblegum-837166.netlify.app',
+  image: '/images/map-generator.svg',
+  intro:
+    'A React application that enables users to create SVG coverage maps by marking counties as "included" or "not included", along with customizable titles. Its intuitive interface and iterative improvements made it a valuable time-saving tool for various team members, while enhancing accessibility for all users.',
+  introImage: '/images/CoverageMapGenerator.png',
+  tags: ['React', 'SVG'],
+};
+
+import ButtonLink from './components/buttonLink';
 
 ## From JPG to SVG
 
-Coverage maps are utilized throughout the UPMC Health Plan public site to convey information about the available insurance plans and coverage options across the state of Pennsylvania.
+<ButtonLink href={`/`} size='large'>
+  Home
+</ButtonLink>
+Coverage maps are utilized throughout the UPMC Health Plan public site to convey information about the
+available insurance plans and coverage options across the state of Pennsylvania.
 
 When I joined UPMC Health Plan in 2019, these maps were originally created as JPGs, intended for print marketing materials.
 
@@ -24,12 +30,19 @@ The SVG structure consists of a parent list containing sub-lists for each groupi
 
 This CodePen shows an abbreviated example of the SVG structure.
 
-<p class="codepen" data-height="300" data-default-tab="html" data-slug-hash="ZEmwLYP" data-user="maxleee" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/maxleee/pen/ZEmwLYP">
-  SVG Map Syntax</a> by Max (<a href="https://codepen.io/maxleee">@maxleee</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
+<p
+  class='codepen'
+  data-height='300'
+  data-default-tab='html'
+  data-slug-hash='ZEmwLYP'
+  data-user='maxleee'
+  style='height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;'>
+  <span>
+    See the Pen <a href='https://codepen.io/maxleee/pen/ZEmwLYP'>SVG Map Syntax</a> by Max (
+    <a href='https://codepen.io/maxleee'>@maxleee</a>) on <a href='https://codepen.io'>CodePen</a>.
+  </span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async src='https://cpwebassets.codepen.io/assets/embed/ei.js'></script>
 
 ## SVG was an improvement, but tedious
 

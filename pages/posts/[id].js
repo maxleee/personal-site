@@ -31,7 +31,7 @@ export default function Post({ postData }) {
           <h1 className='project-title'>{postData.title}</h1>
           <p>{postData.intro}</p>
           <ExternalLinkIcon link={postData.link}>Visit {postData.title}</ExternalLinkIcon>
-          <TableList header='Built With' items={postData.tags} />
+          {/* <TableList header='Built With' items={postData.tags} /> */}
         </div>
         <div className='project-detail-intro-image'>
           <img
