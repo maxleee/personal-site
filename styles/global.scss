@@ -496,6 +496,17 @@ header {
     color: var(--dark-green);
     margin-top: 3rem;
   }
+  pre {
+    background-color: #fff;
+    padding: 1rem;
+    height: 20rem;
+    overflow-y: scroll;
+    border-radius: 5px;
+  }
+  code {
+    font-size: 0.875rem;
+    white-space: pre-wrap;
+  }
 }
 
 .table-list {
