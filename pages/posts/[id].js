@@ -3,12 +3,25 @@ import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
 import ExternalLinkIcon from '../../components/externalLinkIcon';
 import TableList from '../../components/tableList';
+import ButtonLink from '../../components/buttonLink';
+import Link from 'next/link';
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
+  const allPostIds = getAllPostIds();
+
+  console.log(allPostIds);
+  const nextIndex = allPostIds.findIndex(post => post.params.id === postData.id) + 1;
+  let nextPostId = nextIndex;
+  if (nextIndex > allPostIds.length) {
+    nextPostId = 0;
+  }
+  const nextPostData = await getPostData(allPostIds[nextPostId].params.id);
+
   return {
     props: {
       postData,
+      nextPostData,
     },
   };
 }
@@ -20,7 +33,7 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
-export default function Post({ postData }) {
+export default function Post({ postData, nextPostData }) {
   return (
     <Layout>
       <Head>
@@ -45,6 +58,15 @@ export default function Post({ postData }) {
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </section>
       <div className='intro-divider'></div>
+      <div className='project-footer'>
+        <ButtonLink href='/' icon={{ type: 'home', position: 'start' }}>
+          Home
+        </ButtonLink>
+        <div className='next-project-wrapper'>
+          <h2>Next Project</h2>
+          <Link href={`/posts/${nextPostData.id}`}>{nextPostData.title}</Link>
+        </div>
+      </div>
     </Layout>
   );
 }

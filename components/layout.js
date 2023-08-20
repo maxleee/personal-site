@@ -29,11 +29,6 @@ export default function Layout({ children, home }) {
           </header>
         )}
         <main>{children}</main>
-        {!home && (
-          <div>
-            <Link href='/'>← Back to home</Link>
-          </div>
-        )}
       </MotionConfig>
     </div>
   );
