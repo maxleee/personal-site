@@ -47,10 +47,7 @@ export default function Post({ postData, nextPostData }) {
           <TableList header='Built With' items={postData.tags} />
         </div>
         <div className='project-detail-intro-image'>
-          <img
-            src={postData.introImage}
-            alt='Screenshot of Map Generator interface with checkbox lists of counties and preview of generated map.'
-          />
+          <img src={postData.introImage} alt='' />
         </div>
       </section>
       <div className='intro-divider'></div>
