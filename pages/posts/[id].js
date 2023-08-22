@@ -10,7 +10,6 @@ export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
   const allPostIds = getAllPostIds();
 
-  console.log(allPostIds);
   const nextIndex = allPostIds.findIndex(post => post.params.id === postData.id) + 1;
   let nextPostId = nextIndex;
   if (nextIndex > allPostIds.length) {
@@ -59,10 +58,12 @@ export default function Post({ postData, nextPostData }) {
         <ButtonLink href='/' icon={{ type: 'home', position: 'start' }}>
           Home
         </ButtonLink>
-        <div className='next-project-wrapper'>
-          <h2>Next Project</h2>
-          <Link href={`/posts/${nextPostData.id}`}>{nextPostData.title}</Link>
-        </div>
+        {nextPostData.intro && (
+          <div className='next-project-wrapper'>
+            <h2>Next Project</h2>
+            <Link href={`/posts/${nextPostData.id}`}>{nextPostData.title}</Link>
+          </div>
+        )}
       </div>
     </Layout>
   );
