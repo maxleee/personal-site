@@ -12,7 +12,7 @@ export async function getStaticProps({ params }) {
 
   const nextIndex = allPostIds.findIndex(post => post.params.id === postData.id) + 1;
   let nextPostId = nextIndex;
-  if (nextIndex > allPostIds.length) {
+  if (nextIndex >= allPostIds.length) {
     nextPostId = 0;
   }
   const nextPostData = await getPostData(allPostIds[nextPostId].params.id);
