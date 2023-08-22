@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import ButtonLink from './buttonLink';
 
 const { MotionConfig } = require('framer-motion');
 
-const name = 'Max';
 export const siteTitle = 'Max Orenzuk';
 
 export default function Layout({ children, home }) {
@@ -19,13 +19,16 @@ export default function Layout({ children, home }) {
         />
       </Head>
       <MotionConfig reducedMotion='user'>
-        <header>{home ? <></> : <Link href='/'>Home</Link>}</header>
-        <main>{children}</main>
-        {!home && (
-          <div>
-            <Link href='/'>← Back to home</Link>
-          </div>
+        {home ? (
+          <></>
+        ) : (
+          <header>
+            <ButtonLink href='/' icon={{ type: 'home', position: 'start' }}>
+              Home
+            </ButtonLink>
+          </header>
         )}
+        <main>{children}</main>
       </MotionConfig>
     </div>
   );
