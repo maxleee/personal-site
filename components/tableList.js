@@ -1,6 +1,8 @@
-export default function TableList({ color = 'pink', items, header }) {
+import React from 'react';
+
+const TableList = React.forwardRef(({ color = 'pink', items, header }, ref) => {
   return (
-    <div className='table-list'>
+    <div ref={ref} className='table-list'>
       <h3 className={`table-list--title ${color}`}>{header}</h3>
       <ul className='table-list--list'>
         {items.map(item => (
@@ -11,4 +13,6 @@ export default function TableList({ color = 'pink', items, header }) {
       </ul>
     </div>
   );
-}
+});
+
+export default TableList;

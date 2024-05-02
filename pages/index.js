@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import { getSortedPostsData } from '../lib/posts';
-import Link from 'next/link';
 import HeaderBlobsCSS from '../components/headerBlobsCSS';
 import ExternalLinkIcon from '../components/externalLinkIcon';
 import ButtonLink from '../components/buttonLink';
@@ -18,6 +17,31 @@ export async function getStaticProps() {
   };
 }
 
+const scrollAnim = {
+  initial: { opacity: 0, translateY: 50 },
+  inView: {
+    opacity: 1,
+    translateY: 0,
+    transition: {
+      type: 'spring',
+      siffness: 50,
+      staggerChildren: 0.25,
+    },
+  },
+};
+
+const child = {
+  initial: { opacity: 0, translateY: 50 },
+  inView: {
+    opacity: 1,
+    translateY: 0,
+  },
+};
+
+const viewportOptions = {
+  once: true,
+  margin: '0px 100px',
+};
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
@@ -25,8 +49,13 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className='intro-wrapper'>
-        <div className='intro'>
-          <h1 className='main-heading'>
+        <motion.div
+          className='intro'
+          variants={scrollAnim}
+          initial='initial'
+          whileInView='inView'
+          viewport={viewportOptions}>
+          <motion.h1 variants={child} className='main-heading'>
             <span className='main-heading-small'>
               <motion.div
                 whileHover={{ rotate: [10, -5, 8, -2, 3], scale: 1.3 }}
@@ -39,11 +68,11 @@ export default function Home({ allPostsData }) {
               I'm Max
             </span>
             a designer and frontend developer
-          </h1>
-          <p className='tagline'>
+          </motion.h1>
+          <motion.p variants={child} className='tagline'>
             I enjoy finding solutions to complex problems and learning a few things along the way.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
         <div className='intro-divider'></div>
 
         <HeaderBlobsCSS />
@@ -51,16 +80,32 @@ export default function Home({ allPostsData }) {
       </section>
       <div className='intro-divider'></div>
       <section className='about'>
-        <h2 className='title'>A creative and curious problem solver </h2>
-        <p className='paragraph'>
+        <motion.h2
+          variants={scrollAnim}
+          initial='initial'
+          whileInView='inView'
+          viewport={viewportOptions}
+          className='title'>
+          A creative and curious problem solver{' '}
+        </motion.h2>
+        <motion.p
+          variants={scrollAnim}
+          initial='initial'
+          whileInView='inView'
+          viewport={viewportOptions}
+          className='paragraph'>
           As a designer and front end developer with over a decade of experience, I bring a unique
           blend of creativity and technical expertise to every project. In my current role I focus
           on design systems, building sites and emails using HTML, CSS, Javascript, React, and
           Gatsby, and elevating an existing brand in the digital marketing landscape. I believe in
           creating with empathy, always keeping the end user in mind, and striving to create
           experiences that are accessible, intuitive, and user-friendly.
-        </p>
-        <TableList
+        </motion.p>
+        <MotionTableList
+          variants={scrollAnim}
+          initial='initial'
+          whileInView='inView'
+          viewport={viewportOptions}
           color='pink'
           header='Front End Skills'
           items={[
@@ -74,7 +119,11 @@ export default function Home({ allPostsData }) {
             'HTML Emails',
           ]}
         />
-        <TableList
+        <MotionTableList
+          variants={scrollAnim}
+          initial='initial'
+          whileInView='inView'
+          viewport={viewportOptions}
           color='mustard'
           header='Design Skills'
           items={[
@@ -133,3 +182,5 @@ export default function Home({ allPostsData }) {
     </Layout>
   );
 }
+
+const MotionTableList = motion(TableList);
