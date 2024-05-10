@@ -517,7 +517,8 @@ header {
   }
 }
 .project-detail-body {
-  max-width: 40rem;
+  max-width: 41rem;
+  padding-inline: 1rem;
   margin-block: 5rem;
   margin-inline: auto;
   @media (max-width: 600px) {
@@ -546,10 +547,14 @@ header {
   }
   .project-detail-image {
     margin-block: 2rem;
+    margin-inline: 2rem;
     figcaption {
       margin-block: 1rem;
       font-size: 0.875rem;
       text-align: center;
+    }
+    @media (max-width: 600px) {
+      margin-inline: 0;
     }
   }
 }
