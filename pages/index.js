@@ -114,7 +114,7 @@ export default function Home({ allPostsData }) {
                     Read More
                   </ButtonLink>
                 )}
-                <ExternalLinkIcon link={link}>Visit {title}</ExternalLinkIcon>
+                {link && <ExternalLinkIcon link={link}>Visit {title}</ExternalLinkIcon>}
               </div>
             </div>
           </div>
