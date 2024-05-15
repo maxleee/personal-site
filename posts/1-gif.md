@@ -38,5 +38,4 @@ Moreover, to ensure inclusivity, if the users' 'prefers-reduced-motion' setting 
 
 ## A positive learning experience
 
-Overall this project was a joy to work on. I enjoy learning new things and finding practical ways to implement what I have learned. I look forward to working with Angular more in the future sh
-ould the opportunity present itself.
+Overall this project was a joy to work on. I enjoy learning new things and finding practical ways to implement what I have learned. I look forward to working with Angular more in the future should the opportunity present itself.

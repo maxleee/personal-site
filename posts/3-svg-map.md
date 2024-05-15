@@ -25,7 +25,7 @@ However, using JPGs on the website raised concerns regarding accessibility. If t
 
 To address this issue, I took the initiative to create SVG versions of the maps with a code structure that emulates lists, thereby enabling screen reader users to perceive the content just as effectively as sighted users.
 
-The SVG structure consists of a parent list containing sub-lists for each grouping of counties. Each sub-list is equipped with a title element that described its content, such as 'Product not available in these counties.' The counties within each sub-list are listed alphabetically, with each county name represented in a title element.
+The SVG structure consists of a parent list containing sub-lists for each grouping of counties. Each sub-list is equipped with a title element that describes its content, such as 'Product not available in these counties.' The counties within each sub-list are listed alphabetically, with each county name represented in a title element.
 
 Below is an abbreviated example of the SVG structure.
 
@@ -88,7 +88,7 @@ For this initial version, I opted for create-react-app, given its suitability fo
 
 In this first iteration, users could indicate whether a county needed to be included through a single checklist. They could also enter the titles using standard input fields. The form data from these inputs was stored in the application's state and then mapped over to generate the counties within the SVG, organizing them correctly into the included or non-included groups. The two groups were represented as lists to accommodate non-sighted users, and CSS styles were applied for visual formatting. The group titles were utilized as list titles and also to create a visual key below the map.
 
-While users inputted the data required for their map, a live preview of the SVG updated in real-time. Since the form data was stored in the application's state, a new SVG was re-rendered with each state change. To enhance the user experience, I incorporated the npm package 'react-code-blocks' to display a preview of the SVG code, allowing users to double-check the code output alongside the visual representation.
+While users input the data required for their map, a live preview of the SVG updated in real-time. Since the form data was stored in the application's state, a new SVG was re-rendered with each state change. To enhance the user experience, I incorporated the npm package 'react-code-blocks' to display a preview of the SVG code, allowing users to double-check the code output alongside the visual representation.
 
 Once users were content with their map creation, they could conveniently download the SVG file. This was achieved by using the Blob constructor of the File API, enabling the browser to create the SVG file for download.
 
