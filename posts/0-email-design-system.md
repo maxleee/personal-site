@@ -3,7 +3,7 @@ title: 'Email Design System'
 description: 'A branded design system for creating marketing emails built with Foundation for Emails, Figma, and Notion. Empowers strategy and design teams to design and code modern, responsive, and accessible email communications for all email clients.'
 image: '/images/email.svg'
 introImage: '/images/email-intro.png'
-intro: "UPMC Health Plan's marketing emails were facing significant challenges, lacking modern features essential for effective communication, such as mobile responsiveness, pre-header text, and accessibility considerations. The absence of a streamlined process and toolset for email mockup and development made things harder than they needed to be. Collaborating closely with an Email Strategist, and the design team, I started a comprehensive analysis to identify goals achievable with a design overhaul. The culmination of this effort was the inception of a Design System, which would revolutionize our approach to email marketing."
+intro: "UPMC Health Plan's marketing emails were facing significant challenges, lacking modern features essential for effective communication, such as mobile responsiveness, preheader text, and accessibility considerations. The absence of a streamlined process and toolset for email mockup and development made things harder than they needed to be. Collaborating closely with an Email Strategist, and the design team, I started a comprehensive analysis to identify goals achievable with a design overhaul. The culmination of this effort was the inception of a Design System, which would revolutionize our approach to email marketing."
 tags:
   - 'Figma'
   - 'Foundation for Emails'
@@ -20,7 +20,7 @@ To gain a comprehensive understanding of the existing landscape, I looked at exi
     <figcaption>Examples of existing email campaigns with inconsistent header, button, and text styles.</figcaption>
 </figure>
 
-In order to have a solid foundation with consistent branding and styles, yet highly customizable for each campaign, a more systemic approach was needed. I started to conceptualize and create foundational styles and a library of content components that could be mix and matched together. This would allow designers to focus on the email content and goals, instead of adapting content to pre-defined templates.
+In order to have a solid foundation with consistent branding and styles, yet highly customizable for each campaign, a more systemic approach was needed. I started to conceptualize and create foundational styles and a library of content components that could be mixed and matched together. This would allow designers to focus on the email content and goals, instead of adapting content to pre-defined templates.
 
 ### Foundational styles
 
@@ -61,7 +61,7 @@ Once the foundations were established, I moved on to the design of the base comp
     <figcaption>Callouts used for adding emphasis to information or a CTA. Available in three colors and two styles.</figcaption>
 </figure>
 
-To establish these base components, I analyzed previous campaigns and the design elements that were used, even if inconsistently. After compiling this list of components to be made, I recieved feedback from the team of designers and strategists that this would be enough to get us off the ground creating emails, and could identify other needs after creating this MVP.
+To establish these base components, I analyzed previous campaigns and the design elements that were used, even if inconsistently. After compiling this list of components to be made, I received feedback from the team of designers and strategists that this would be enough to get us off the ground creating emails, and could identify other needs after creating this MVP.
 
 ## Development tooling
 
@@ -81,7 +81,7 @@ It also meant that the team didn't have to learn React or another new coding lan
 To build our code base, I forked the standard Foundation for Emails starter project and made customizations for our brand in order to create a codebase that the whole team could use:
 
 - Modified and added our foundational styles in SCSS.
-- Built complex components like headers, footers, content pairs, and brand bars as partials that can added and customized to any email.
+- Built complex components like headers, footers, content pairs, and brand bars as partials that can be customized or added as-is to any email.
 - Added scripts in gulp to customize the build process including:
   - Italicizing common product names
   - Adding standardized link tracking to links
@@ -103,4 +103,4 @@ All components have documentation from a design and development perspective orga
     <figcaption>Three emails that were designed and developed with the design system, with consistent branding and styles, yet still highly customizable for each communication.</figcaption>
 </figure>
 
-The Email Design System has been seen as a success throughout the organziation. It resulted in increased productivity, accuracy, and more cohesive marketing email communications. With the time saved the team is able to focus more on A/B testing, optimization, and creating high-performing campaigns that increase our engagement and conversion rates.
+The Email Design System has been seen as a success throughout the organization. It resulted in increased productivity, accuracy, and more cohesive marketing email communications. With the time saved the team is able to focus more on A/B testing, optimization, and creating high-performing campaigns that increase our engagement and conversion rates.
