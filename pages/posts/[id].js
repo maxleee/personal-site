@@ -39,9 +39,8 @@ export default function Post({ postData, nextPostData }) {
         <title>{postData.title}</title>
       </Head>
       <section className='project-detail-intro'>
-        <div className='project-detail-intro-image'>
-          <img src={postData.introImage} alt='' />
-        </div>
+        <img className='project-detail-intro-image' src={postData.introImage} alt='' />
+
         <div className='project-detail-intro-content'>
           <div className='content-main'>
             <h1 className='project-title'>{postData.title}</h1>

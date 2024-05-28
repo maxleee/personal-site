@@ -466,7 +466,6 @@ header {
 }
 
 .project-detail-intro {
-  padding-inline: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -475,16 +474,13 @@ header {
   @media (max-width: 900px) {
     flex-direction: column;
   }
-  @media (max-width: 600px) {
-    padding-inline: 1.5rem;
-  }
 }
 .project-detail-intro-content {
+  padding-inline: 5rem;
   display: flex;
   gap: 2rem;
   .content-main {
     width: 70%;
-
     .project-title {
       color: var(--dark-green);
       font-size: 3.125rem;
@@ -496,19 +492,30 @@ header {
   .content-secondary {
     width: 30%;
     margin-block-start: 3.5rem;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
-  .tag {
-    display: inline;
-    border: 1px var(--dark-green) solid;
-    border-radius: 50px;
-    padding: 0.25rem 0.75rem;
-    margin-top: 0;
-    margin-right: 0.75rem;
-    font-size: 0.875rem;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: 0;
+    .content-main,
+    .content-secondary {
+      width: 100%;
+    }
+    .content-secondary {
+      text-align: left;
+      align-items: flex-start;
+      margin-block-start: 0;
+    }
+  }
+  @media (max-width: 600px) {
+    padding-inline: 1.5rem;
   }
 }
+
 .project-detail-intro-image {
-  margin-inline: -5rem;
   margin-block-end: 3rem;
   overflow: hidden;
   // position: absolute;
@@ -519,9 +526,7 @@ header {
   justify-content: center;
   height: 500px;
   max-height: 70vh;
-  @media (max-width: 900px) {
-    width: 100%;
-  }
+  object-fit: cover;
 }
 .project-detail-body {
   max-width: 41rem;
@@ -607,6 +612,12 @@ header {
     text-align: right;
     .table-list--list {
       justify-content: flex-end;
+    }
+    @media (max-width: 900px) {
+      text-align: left;
+      .table-list--list {
+        justify-content: flex-start;
+      }
     }
   }
   .table-list--title {
