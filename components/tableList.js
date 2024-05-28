@@ -1,6 +1,6 @@
-export default function TableList({ color = 'pink', items, header }) {
+export default function TableList({ color = 'pink', align = 'left', items, header }) {
   return (
-    <div className='table-list'>
+    <div className={`table-list ${align}`}>
       <h3 className={`table-list--title ${color}`}>{header}</h3>
       <ul className='table-list--list'>
         {items.map(item => (

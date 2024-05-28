@@ -2,7 +2,7 @@
 title: 'Email Design System'
 description: 'A branded design system for creating marketing emails built with Foundation for Emails, Figma, and Notion. Empowers strategy and design teams to design and code modern, responsive, and accessible email communications for all email clients.'
 image: '/images/email.svg'
-introImage: '/images/email-intro.png'
+introImage: '/images/email-cover.png'
 intro: "UPMC Health Plan's marketing emails were facing significant challenges, lacking modern features essential for effective communication, such as mobile responsiveness, preheader text, and accessibility considerations. The absence of a streamlined process and toolset for email mockup and development made things harder than they needed to be. Collaborating closely with an Email Strategist, and the design team, I started a comprehensive analysis to identify goals achievable with a design overhaul. The culmination of this effort was the inception of a Design System, which would revolutionize our approach to email marketing."
 tags:
   - 'Figma'

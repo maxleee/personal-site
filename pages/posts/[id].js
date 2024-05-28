@@ -39,16 +39,20 @@ export default function Post({ postData, nextPostData }) {
         <title>{postData.title}</title>
       </Head>
       <section className='project-detail-intro'>
-        <div className='project-detail-intro-content'>
-          <h1 className='project-title'>{postData.title}</h1>
-          <p>{postData.intro}</p>
-          {postData.link && (
-            <ExternalLinkIcon link={postData.link}>Visit {postData.title}</ExternalLinkIcon>
-          )}
-          <TableList header='Built With' items={postData.tags} />
-        </div>
         <div className='project-detail-intro-image'>
           <img src={postData.introImage} alt='' />
+        </div>
+        <div className='project-detail-intro-content'>
+          <div className='content-main'>
+            <h1 className='project-title'>{postData.title}</h1>
+            <p>{postData.intro}</p>
+          </div>
+          <div className='content-secondary'>
+            {postData.link && (
+              <ExternalLinkIcon link={postData.link}>Visit {postData.title}</ExternalLinkIcon>
+            )}
+            <TableList header='Built With' items={postData.tags} align='right' />
+          </div>
         </div>
       </section>
       <div className='intro-divider'></div>
