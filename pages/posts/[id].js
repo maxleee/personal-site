@@ -39,7 +39,13 @@ export default function Post({ postData, nextPostData }) {
         <title>{postData.title}</title>
       </Head>
       <section className='project-detail-intro'>
-        <img className='project-detail-intro-image' src={postData.introImage} alt='' />
+        <picture className='project-detail-intro-image'>
+          <source
+            srcset={`/images/${postData.introImage}-cover-mobile.jpg`}
+            media='(max-width: 600px)'
+          />
+          <img src={`/images/${postData.introImage}-cover.jpg`} alt='' />
+        </picture>
 
         <div className='project-detail-intro-content'>
           <div className='content-main'>
