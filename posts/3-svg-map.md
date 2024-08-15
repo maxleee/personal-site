@@ -4,7 +4,7 @@ description: 'A user-friendly web app developed at UPMC Health Plan, enabling ef
 link: 'https://friendly-bubblegum-837166.netlify.app'
 image: '/images/map-generator.svg'
 intro: 'A React application that enables non-technical team members to create SVG coverage maps. Its intuitive interface and iterative improvements made it a valuable time-saving tool for various team members, while enhancing accessibility for all users.'
-introImage: '/images/CoverageMapGenerator.png'
+introImage: 'map'
 tags:
   - 'React'
   - 'SVG'
