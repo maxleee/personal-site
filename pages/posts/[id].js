@@ -41,7 +41,7 @@ export default function Post({ postData, nextPostData }) {
       <section className='project-detail-intro'>
         <picture className='project-detail-intro-image'>
           <source
-            srcset={`/images/${postData.introImage}-cover-mobile.jpg`}
+            srcSet={`/images/${postData.introImage}-cover-mobile.jpg`}
             media='(max-width: 600px)'
           />
           <img src={`/images/${postData.introImage}-cover.jpg`} alt='' />
