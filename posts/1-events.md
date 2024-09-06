@@ -1,10 +1,10 @@
 ---
 title: 'Community Events'
-description: 'Design for Medicare members and prospective members to find events near them to attend.'
-image: '/images/GIFsearch.svg'
+description: 'Medicare members and prospective members needed an easy to use experience to find events near them to attend.'
+image: '/images/events-intro.jpg'
 link: ''
-introImage: 'gif'
-intro: 'My background is mostly in React, but I wanted to dip into Angular to broaden my knowledge. After learning the fundamentals of both Angular and TypeScript, I built a GIF search app that allows a user to search for GIFs by keyword, and copy the URL to their selected GIF. In addition to building the app, I designed the logo, UI components, and overall layout using Figma.'
+introImage: 'events'
+intro: "How do you turn a clunky, map-based event finder into a sleek, user-friendly platform for Medicare members? This case study walks through our team's journey of research, design, and testing to revolutionize the way older adults discover and engage with healthcare events and meetings."
 tags:
   - 'UX Research'
   - 'UX Design'
@@ -13,7 +13,7 @@ tags:
 
 ## Introduction
 
-The previous experience for Medicare members and prospects to find events and meetings near them was dated, unaccessible, and hard to use. As part of a larger transition into Sitecore CMS, I worked with a team consisting of a UX Researcher, Project Manager, and a client stakeholder to better understand the user's needs and expectations to inform a successful redesign.
+The previous experience for Medicare members and prospects to find events and meetings near them was dated, unaccessible, and hard to use. As part of a larger transition into Sitecore CMS, I worked with a team consisting of a UX Researcher, Project Manager, and a client stakeholder to better understand the business needs and user expectations to inform a successful redesign.
 
 <figure class="project-detail-image">
     <img src="/images/events-old.png" alt="" />
@@ -86,7 +86,7 @@ After discussing these wireframes with the team, I used their feedback and conti
     <figcaption>Visual design exploration for event detail pages.</figcaption>
 </figure>
 
-Once I found a solid direction with the visual design, I validated the designs with internal resources and built a prototype we could use to do usability testing with a group of 14 users, half general population and half Medicare age. With this usability test we wanted to gauge how easy users found the experience, and if they felt anything was missing.
+Once I found a solid direction with the visual design, I validated the designs with internal resources. Through this process we discovered that prospective meetings would require a unique experience from member meetings that didn't include an event detail page. We focused on these prospective meetings and built a prototype we could use to do usability testing with a group of 14 users, half general population and half Medicare age. With this usability test we wanted to gauge how easy users found the experience, and if they felt anything was missing.
 
 [View the final prototype](https://www.figma.com/proto/0NFadUq7ur4bSK12LBOUQt/Medicare-Events-Prototype?page-id=0%3A1&node-id=0-2169&node-type=FRAME&viewport=905%2C487%2C0.22&t=gDWQkw29nQbsVFUS-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=0%3A2169)
 
