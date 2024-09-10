@@ -1,6 +1,6 @@
 ---
 title: 'GIFsearch'
-description: 'I built this project while learning Angular and TypeScript. It utilizes the Giphy Search API to display gifs based on user provided keywords. My favorite feature is related to accessibility, the gif playback pauses according to the users prefers-reduced-motion settings.'
+description: "A gif search app I built while learning more about Angular and TypeScript. The Giphy Search API is used to fetch gifs based on the user's search. Paying close attention to accessibility, gif playback pauses according to the users prefers-reduced-motion settings."
 image: '/images/GIFsearch.svg'
 link: 'https://verdant-entremet-0d54ae.netlify.app/'
 introImage: 'gif'

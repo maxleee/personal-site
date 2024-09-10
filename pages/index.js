@@ -61,6 +61,19 @@ export default function Home({ allPostsData }) {
           experiences that are accessible, intuitive, and user-friendly.
         </p>
         <TableList
+          color='mustard'
+          header='Design Skills'
+          items={[
+            'UI/Visual Design',
+            'Design Systems',
+            'Web Design',
+            'Email Design',
+            'Social and Display Ads',
+            'Figma',
+            'Adobe Suite',
+          ]}
+        />
+        <TableList
           color='pink'
           header='Front End Skills'
           items={[
@@ -72,19 +85,6 @@ export default function Home({ allPostsData }) {
             'Accessibility',
             'SVG',
             'HTML Emails',
-          ]}
-        />
-        <TableList
-          color='mustard'
-          header='Design Skills'
-          items={[
-            'UI/Visual Design',
-            'Design Systems',
-            'Web Design',
-            'Email Design',
-            'Social and Display Ads',
-            'Figma',
-            'Adobe Suite',
           ]}
         />
       </section>

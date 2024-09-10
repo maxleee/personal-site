@@ -1,6 +1,6 @@
 ---
 title: 'SVG Map Generator'
-description: 'A user-friendly web app developed at UPMC Health Plan, enabling effortless creation of SVG-based maps to communicate insurance plans and coverage options across Pennsylvania. Its iterative development provided multi-category support, increased accessibility, and time-saving benefits for designers, product managers, and more.'
+description: 'A utility I developed that enabled effortless creation of SVG-based maps of the state of Pennsylvania to communicate insurance coverage availability. Its iterative development provided multi-category support, increased accessibility, and time-saving benefits.'
 link: 'https://friendly-bubblegum-837166.netlify.app'
 image: '/images/map-generator.svg'
 intro: 'A React application that enables non-technical team members to create SVG coverage maps. Its intuitive interface and iterative improvements made it a valuable time-saving tool for various team members, while enhancing accessibility for all users.'

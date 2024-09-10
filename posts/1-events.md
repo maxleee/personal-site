@@ -1,7 +1,7 @@
 ---
 title: 'Community Events'
-description: 'Medicare members and prospective members needed an easy to use experience to find events near them to attend.'
-image: '/images/events-intro.jpg'
+description: 'Tasked with updating how Medicare members find events and meetings, we delved into a redesign process. Our journey, from discovery research to prototype testing, showcases how user-centric design can address accessibility challenges and enhance digital experiences for older adults.'
+image: '/images/events-icon.svg'
 link: ''
 introImage: 'events'
 intro: "How do you turn a clunky, map-based event finder into a sleek, user-friendly platform for Medicare members? This case study walks through our team's journey of research, design, and testing to revolutionize the way older adults discover and engage with healthcare events and meetings."
@@ -20,7 +20,7 @@ The previous experience for Medicare members and prospects to find events and me
     <figcaption>The previous event discovery experience that was map based. Events would appear as pin drops on the embedded Google Map.</figcaption>
 </figure>
 
-## Research
+## Research and Discovery
 
 To inform the research, we compiled a list of important questions.
 
